@@ -1,0 +1,37 @@
+.jp-class {
+    font-family: ygo-jp, 楷体, serif;
+
+    .card-name {
+        top: 95px;
+        letter-spacing: -2px;
+    }
+
+    .spell-trap {
+        top: 250px;
+        font-size: 80px;
+        right: 130px;
+        letter-spacing: -2px;
+    }
+
+    .pendulum-description {
+        font-size: 36px;
+        letter-spacing: -2px;
+    }
+
+    .card-description {
+        top: 1522px;
+        font-size: 38px;
+        line-height: 1.2;
+
+        .card-effect {
+            font-size: 46px;
+            text-indent: -0.2em;
+            margin-bottom: -16px;
+        }
+
+        .description-info {
+            margin-top: 16px;
+            letter-spacing: -2px;
+        }
+    }
+}
