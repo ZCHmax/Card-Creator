@@ -90,12 +90,7 @@
                         </div>
                     </div>
 
-                    <div class="atk-def-link">
-                        <el-image :src="baseImage + '/atk-def.svg'"
-                                  v-if="(form.type==='monster'&&form.cardType!=='link')||form.type==='pendulum'"></el-image>
-                        <el-image :src="baseImage + '/atk-link.svg'" v-if="form.type==='monster'&&form.cardType==='link'"></el-image>
-                    </div>
-
+                    <hr class="atk-def-link">
                     <div class="card-hp" v-if="['monster','pendulum'].includes(form.type)">
                         <span v-if="form.hp >= 0">HP/</span>
                         <span v-if="form.hp >= 0">{{form.hp}}</span>
@@ -103,11 +98,13 @@
                     </div>
 
                     <div class="card-atk" v-if="['monster','pendulum'].includes(form.type)">
+                        <span v-if="form.hp >= 0">ATK/</span>
                         <span v-if="form.atk >= 0">{{form.atk}}</span>
                         <span v-else-if="form.atk === -1">?</span>
                     </div>
 
                     <div class="card-def" v-if="(form.type==='monster'&&form.cardType!=='link')||form.type==='pendulum'">
+                        <span v-if="form.hp >= 0">DEF/</span>
                         <span v-if="form.def >= 0">{{form.def}}</span>
                         <span v-else-if="form.def === -1">?</span>
                     </div>
@@ -891,7 +888,9 @@
 
             .atk-def-link {
                 position: absolute;
-                left: 109px;
+                border: 1px solid black;
+                width: 1160px;
+                left: 110px;
                 top: 1844px;
                 z-index: 20;
             }
